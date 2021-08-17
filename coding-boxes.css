@@ -1,0 +1,54 @@
+.code__box{
+    margin: 0 20px;
+    width: 40%;
+    min-width: 400px;
+    height: 80vh;
+    position: relative;
+}
+
+.html__box, .css__box{
+    display: block;
+    margin: 0;
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #333;
+    color: white;
+    padding: 45px 0 10px 0;
+    overflow-y: scroll;
+}
+
+.html__box::after, .css__box::after{
+    content: 'HTML';
+    position: absolute;
+    top: 0;
+    margin: -5px auto;
+    display: block;
+    width: 100%;
+    background: #111;
+    color: white;
+    font-weight: bold;
+    font-size: 34px;
+    text-align: center;
+}
+
+.css__box::after{
+    content: 'CSS';
+    top: 295px;
+}
+
+.html__box{
+    height: 270px;
+    margin-bottom: 25px;
+}
+
+.css__box{
+    height: 400px;
+}
+
+@media (max-width: 859px){
+    .code__box{
+        width: 90%;
+        min-width: 0;
+    }
+}
